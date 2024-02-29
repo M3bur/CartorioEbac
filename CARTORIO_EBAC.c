@@ -178,7 +178,7 @@ int main() {
     int laco = 1;
 
     // Loop principal do programa
-    for (laco = 1; laco == 1;) {
+    while (laco == 1) {
         system("cls");
 
         setlocale(LC_ALL, "Portuguese");
@@ -188,7 +188,8 @@ int main() {
         printf("Escolha a opção desejada do menu\n\n");
         printf("\t1 - Registrar nomes\n");
         printf("\t2 - Consultar nomes\n");
-        printf("\t3 - Deletar nomes\n\n");
+        printf("\t3 - Deletar nomes\n");
+        printf("\t4 - Cadastrar mais usuários ou voltar ao menu\n\n");
         printf("Opção: ");
 
         // Armazenando a escolha do usuário
@@ -208,6 +209,31 @@ int main() {
 
             case 3:
                 deletar();
+                break;
+
+            case 4:
+                // Caso 4: Cadastrar mais usuários ou voltar ao menu principal
+                printf("Opções:\n");
+                printf("\t1 - Cadastrar mais usuários\n");
+                printf("\t2 - Voltar ao menu principal\n\n");
+                printf("Opção: ");
+                int opcao_submenu;
+                scanf("%d", &opcao_submenu);
+
+                switch (opcao_submenu) {
+                    case 1:
+                        // Cadastrar mais usuários
+                        registro();
+                        break;
+
+                    case 2:
+                        // Voltar ao menu principal
+                        break;
+
+                    default:
+                        printf("Opção inválida!\n");
+                        break;
+                }
                 break;
 
             default:
