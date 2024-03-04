@@ -1,9 +1,9 @@
-#include <stdio.h>   // Biblioteca para comunicação com o usuário
-#include <stdlib.h>  // Biblioteca para alocação de espaço em memória
-#include <locale.h>  // Biblioteca para alocação de texto por região
-#include <string.h>  // Biblioteca responsável por manipulação de strings
-#include <wchar.h>   // Biblioteca responsável por caracteres
-#include <wctype.h>  // Biblioteca responsável por caracteres
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+#include <wchar.h>
+#include <wctype.h>
 
 // Função para limpar o buffer do teclado
 void limparBuffer() {
@@ -190,6 +190,7 @@ int main() {
         printf("\t2 - Consultar nomes\n");
         printf("\t3 - Deletar nomes\n");
         printf("\t4 - Cadastrar mais usuários ou voltar ao menu\n\n");
+        printf("\t5 - Sair do sistema\n\n");
         printf("Opção: ");
 
         // Armazenando a escolha do usuário
@@ -234,6 +235,12 @@ int main() {
                         printf("Opção inválida!\n");
                         break;
                 }
+                break;
+
+            case 5:
+                // Sair do sistema
+                printf("Saindo do sistema...\n");
+                laco = 0;
                 break;
 
             default:
